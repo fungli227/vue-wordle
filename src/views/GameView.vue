@@ -4,6 +4,7 @@
     import WordHelper from "@/components/WordHelper";
     import Letter from "@/components/Letter.vue";
 
+    // window.WordHelper = WordHelper;
     const pastAttempts = ref([]);
     const checkingResults = ref([]);
 
