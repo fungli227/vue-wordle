@@ -45,7 +45,7 @@ export default class WordHelper {
     return Array.from(userInput).map((char, userCharIndex) => {
       if (!letterIndex[char]) return "false";
       let correctIndex = letterIndex[char].shift();
-      if (!letterIndex.length) letterIndex[char] = undefined;
+      if (!letterIndex[char].length) letterIndex[char] = undefined;
       if (correctIndex === userCharIndex) return "true";
       return "POS";
     });
