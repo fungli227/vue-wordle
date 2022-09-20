@@ -6,7 +6,7 @@ export default class WordHelper {
 
   static status = {
     "LENGTH": "Please enter a 5-letter word",
-    "NOT-A-WORD": "The word is not recognised",
+    "NOT-A-WORD": "The word is not recognised"
   };
   
 
@@ -55,7 +55,7 @@ export default class WordHelper {
     // return "error";
     const startDate = new Date(2021, 5, 0, 0, 0, 0, 0);
     const today = new Date();
-    today.setHours(0, 0, 0, 0);
+    today.setHours(24, 0, 0, 0);
 
     const daysFromStart = (today.getTime() - startDate.getTime()) / (3600*24*1000);
     return answers[daysFromStart % answers.length]; 
