@@ -53,6 +53,8 @@ export default class WordHelper {
 
   static getTheWord() : string {
     // return "error";
+    if ((window as any).word) return (window as any).word;
+    
     const startDate = new Date(2021, 5, 0, 0, 0, 0, 0);
     const today = new Date();
     today.setHours(24, 0, 0, 0);

@@ -50,7 +50,6 @@
     }
 
     function filterInput() {
-        console.log("changed");
         currentAttempt.value = currentAttempt.value.replace(/[^a-zA-Z]+/g, '').toLowerCase();
     }
 
@@ -60,7 +59,7 @@
     refocus();
 
     function simulateKey(key) {
-        if (key === "⎆") return mainInput.value.submit();
+        if (key === "⎆") return mainInput.value.form.dispatchEvent( new Event("submit"));
         if (key === "␡") {
             currentAttempt.value = currentAttempt.value.slice(0, -1);
         } else {
