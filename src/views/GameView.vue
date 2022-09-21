@@ -84,6 +84,7 @@
             <form @submit.prevent="handleSubmit" v-if="gameState === 'started'">
             <input ref="mainInput" class="text-black opacity-0 fixed -top-3/4" maxlength="5"
                     v-model="currentAttempt"
+                    inputmode="none"
                     @input="filterInput"
                     @blur="refocus" auto-focus/>
             </form>
