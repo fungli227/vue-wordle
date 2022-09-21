@@ -50,7 +50,7 @@
     }
 
     function filterInput() {
-        currentAttempt.value = currentAttempt.value.replace(/[^a-zA-Z]+/g, '').toLowerCase();
+        currentAttempt.value = currentAttempt.value.replace(/[^a-zA-Z]+/g, '').toLowerCase().slice(0, 5);
     }
 
     function refocus() {

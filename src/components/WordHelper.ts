@@ -1,5 +1,5 @@
 import answers from '@/components/wordle.json'
-import * as allWords from 'word-list-json';
+import allWords from 'word-list-json';
 
 export default class WordHelper {
   static wordDict : any;
@@ -17,6 +17,7 @@ export default class WordHelper {
     if ((storedJson != null) && (storedJson != "")) return this.setDict(JSON.parse(storedJson));
 
     let newDict : any = {};
+    console.log(allWords)
     for (let word of allWords) {
       if (word.length < 5) continue;
       if (word.length > 5) break;

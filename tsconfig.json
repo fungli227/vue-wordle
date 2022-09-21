@@ -6,6 +6,8 @@
     "allowJs": true,
     "target": "es2015",
     "module": "esnext",
+    "resolveJsonModule": true,
+    "checkJs": false,
     "lib": ["dom", "es2018"],
     "paths": {
       "@/*": ["./src/*"]
