@@ -56,12 +56,11 @@ export default class WordHelper {
     // return "error";
     if ((window as any).word) return (window as any).word;
     
-    const startDate = new Date(2021, 5, 0, 0, 0, 0, 0);
+    const startDate = new Date("2021-06-17 00:00:00");
     const today = new Date();
-    today.setHours(24, 0, 0, 0);
 
     const daysFromStart = (today.getTime() - startDate.getTime()) / (3600*24*1000);
-    return answers[daysFromStart % answers.length]; 
+    return answers[Math.floor(daysFromStart % answers.length)]; 
   }
 
   static check(word : string) {
